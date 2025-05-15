@@ -1,1 +1,176 @@
-New file
+git push origin master
+Username for 'https://github.com': 1ga22cs059
+Password for 'https://1ga22cs059@github.com': 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 1.37 KiB | 1.37 MiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/1ga22cs059/lab3/pull/new/master
+remote: 
+To https://github.com/1ga22cs059/lab3.git
+ * [new branch]      master -> master
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ git branch
+* master
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ git checkout -b slave
+Switched to a new branch 'slave'
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ git branch
+  master
+* slave
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ echo "This is a slave file" >> slave1.txt
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ cat slave1.txt
+This is a slave file
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ git add .
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ git commit -m "Commit msg here for slave"
+[slave 5b51de3] Commit msg here for slave
+ 1 file changed, 1 insertion(+)
+ create mode 100644 slave1.txt
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ ls -la
+total 32
+drwxrwxr-x  4 admin1 admin1 4096 May 15 15:49 .
+drwxr-xr-x 38 admin1 admin1 4096 May 15 15:46 ..
+-rw-rw-r--  1 admin1 admin1   34 May 15 15:41 create.txt
+drwxrwxr-x  8 admin1 admin1 4096 May 15 15:50 .git
+-rw-rw-r--  1 admin1 admin1  353 May 15 15:38 .gitignore
+drwxrwxr-x  3 admin1 admin1 4096 May 15 15:34 lab3
+-rw-rw-r--  1 admin1 admin1    6 May 15 15:38 README.md
+-rw-rw-r--  1 admin1 admin1   21 May 15 15:49 slave1.txt
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ git checkout main
+warning: unable to rmdir 'lab3': Directory not empty
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+Switched to a new branch 'main'
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ ls -la
+total 24
+drwxrwxr-x  4 admin1 admin1 4096 May 15 15:50 .
+drwxr-xr-x 38 admin1 admin1 4096 May 15 15:46 ..
+drwxrwxr-x  8 admin1 admin1 4096 May 15 15:50 .git
+-rw-rw-r--  1 admin1 admin1  353 May 15 15:38 .gitignore
+drwxrwxr-x  3 admin1 admin1 4096 May 15 15:34 lab3
+-rw-rw-r--  1 admin1 admin1    6 May 15 15:38 README.md
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ git checkout slave
+Switched to branch 'slave'
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ git branch
+  main
+  master
+* slave
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ git push origin slave
+Username for 'https://github.com': 1ga22cs059
+Password for 'https://1ga22cs059@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 294 bytes | 294.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'slave' on GitHub by visiting:
+remote:      https://github.com/1ga22cs059/lab3/pull/new/slave
+remote: 
+To https://github.com/1ga22cs059/lab3.git
+ * [new branch]      slave -> slave
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ git checkout main
+warning: unable to rmdir 'lab3': Directory not empty
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ git branch
+* main
+  master
+  slave
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ git checkout slave
+Switched to branch 'slave'
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ ls
+create.txt  lab3  README.md  slave1.txt
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ echo "newly added 3b file" >> 3b.txt
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ cat 3b.txt
+newly added 3b file
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ git add .
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ git commit -m "3b commit message goes here"
+[slave 3106c4a] 3b commit message goes here
+ 1 file changed, 1 insertion(+)
+ create mode 100644 3b.txt
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ git checkout main
+warning: unable to rmdir 'lab3': Directory not empty
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ ls
+lab3  README.md
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ git merge slave -m "merged file commit"
+Updating 5105381..3106c4a
+Fast-forward (no commit created; -m option ignored)
+ 3b.txt     | 1 +
+ create.txt | 2 ++
+ lab3       | 1 +
+ slave1.txt | 1 +
+ 4 files changed, 5 insertions(+)
+ create mode 100644 3b.txt
+ create mode 100644 create.txt
+ create mode 160000 lab3
+ create mode 100644 slave1.txt
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ git log
+commit 3106c4a3cc954a9a2b55dd2f3556f6777ffbcf54 (HEAD -> main, slave)
+Author: 1ga22cs059 <1ga22cs059@gmail.com>
+Date:   Thu May 15 15:54:44 2025 +0530
+
+    3b commit message goes here
+
+commit 5b51de3dfbb1b85cd6a97959ff3cd91aeec41d0f (origin/slave)
+Author: 1ga22cs059 <1ga22cs059@gmail.com>
+Date:   Thu May 15 15:50:18 2025 +0530
+
+    Commit msg here for slave
+
+commit 3e6fbecf2f36eafdf8914b96761eda1c5394f3b1 (origin/master, master)
+Author: 1ga22cs059 <1ga22cs059@gmail.com>
+Date:   Thu May 15 15:42:04 2025 +0530
+
+    commit message
+
+commit 5105381dd754c33bbbab391823d4ae539b0b7921 (origin/main)
+Author: 1ga22cs059 <1ga22cs059@gmail.com>
+Date:   Thu May 15 15:11:57 2025 +0530
+
+    Initial commit
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ git tag v1.0 HEAD
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ git log
+commit 3106c4a3cc954a9a2b55dd2f3556f6777ffbcf54 (HEAD -> main, tag: v1.0, slave)
+Author: 1ga22cs059 <1ga22cs059@gmail.com>
+Date:   Thu May 15 15:54:44 2025 +0530
+
+    3b commit message goes here
+
+commit 5b51de3dfbb1b85cd6a97959ff3cd91aeec41d0f (origin/slave)
+Author: 1ga22cs059 <1ga22cs059@gmail.com>
+Date:   Thu May 15 15:50:18 2025 +0530
+
+    Commit msg here for slave
+
+commit 3e6fbecf2f36eafdf8914b96761eda1c5394f3b1 (origin/master, master)
+Author: 1ga22cs059 <1ga22cs059@gmail.com>
+Date:   Thu May 15 15:42:04 2025 +0530
+
+    commit message
+
+commit 5105381dd754c33bbbab391823d4ae539b0b7921 (origin/main)
+Author: 1ga22cs059 <1ga22cs059@gmail.com>
+Date:   Thu May 15 15:11:57 2025 +0530
+
+    Initial commit
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ git push origin v1.0
+Username for 'https://github.com': 1ga22cs059@gmail.com
+Password for 'https://1ga22cs059%40gmail.com@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 287 bytes | 287.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/1ga22cs059/lab3.git
+ * [new tag]         v1.0 -> v1.0
+admin1@admin1-ThinkCentre-M70q-Gen-2:~/gitLab3$ 
+
